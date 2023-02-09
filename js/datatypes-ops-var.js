@@ -2,9 +2,9 @@ let a = 1;
 let b = a++;
 let c = ++a;
 // what is the value of a, b, and c?
-   a = 1
-   b = 1
-   c = 2
+// a = 3 b = 1 c = 3
+
+
 
 // console.log(a);
 // console.log(b);
@@ -25,7 +25,7 @@ e++;
 let perplexed; // perplexed is undefined (no value is assigned)
 perplexed + 2;
 
-//undefined
+//NaN
 
 //
 
@@ -38,7 +38,7 @@ perplexed + 2;
  let price1 = "2.7";
  price.toFixed(2);
 //
-// // will receive 2.7
+// // will receive a runtime error
 //
 // console.log(price1);
 
@@ -47,7 +47,7 @@ isNaN(0)
 isNaN(1)
 //false
 isNaN("")
-//true
+//false
 isNaN("string")
 //true
 isNaN("0")
@@ -61,44 +61,44 @@ isNaN(Number.MAX_VALUE)
 isNaN(Infinity)
 //false
 isNaN("true")
-//false
+//true
 isNaN(true)
 //false
 isNaN("false")
-//false
+//true
 isNaN(false)
 //false
 // to illustrate why the isNaN() function is needed:
 NaN == NaN
 
 
-!true
+//!true
 //false
-!false
+//!false
 //true
-!!true
+//!!true
 //true
-!!false
+//!!false
 //false
-!!0
+//!!0
 //false
-!!-0
+//!!-0
 //false
-!!1
+//!!1
 //true
-!!-1
-//-true
-!!0.1
+//!!-1
 //true
-!!"hello"
+//!!0.1
 //true
-!!""
+//!!"hello"
+//true
+//!!""
 //false
-!!''
+//!!''
 //false
-!!"false"
+//!!"false"
 // false
-!!"0"
+//!!"0"
 //true
 
 let sample = "Hello Codeup";
