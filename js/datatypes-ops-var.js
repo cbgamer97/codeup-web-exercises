@@ -102,8 +102,8 @@ NaN == NaN
 //true
 
 let sample = "Hello Codeup";
-sample.length;
-sample.toLowerCase();
+let sampleLength = sample.length;
+let sampleLower = sample.toLowerCase();
 sample = sample + " Students.";
 let newClass = sample.replace(" Students", " Class");
 // console.log(newClass);
@@ -112,7 +112,7 @@ let indexC = newClass.indexOf("C");
  // console.log(indexC);
 
 let substring = newClass.substring(6, 12)
-// console.log(substring);
+ console.log(substring);
 
 let littleMermaid = 3 * 3;
 let broBear =  5 * 3;
@@ -121,19 +121,35 @@ let totalCost = littleMermaid + broBear + hercules;
 // console.log(totalCost);
 
 let work = (400 * 6) + (380 * 4) + (350 * 10);
-// console.log(work);
+let formattedPaycheck = work.toLocaleString("en-US", {style:"currency", currency:"USD"});
+ console.log(`You made ${formattedPaycheck} this week from work!`);
 
+let scheduleConflicts = false;
+let maxClassSize = 30;
+let currentClassSize = 24;
 
-let classSize = 19;
-let fullClass = 25;
-let classTime = 2;
-let classStart = 12;
+let canEnroll = !scheduleConflicts && (currentClassSize < maxClassSize);
+console.log(canEnroll);
 
-if (classSize < fullClass && classStart !== classTime) {
-    console.log("You may enroll in this class!");
-} else {
-    console.log("You may not enroll.")
-}
+// let classSize = 19;
+// let fullClass = 25;
+// let classTime = 2;
+// let classStart = 12;
+//
+// if (classSize < fullClass && classStart !== classTime) {
+//     console.log("You may enroll in this class!");
+// } else {
+//     console.log("You may not enroll.")
+// }
+
+let minCartSize = 2;
+let cartSize2 = 3;
+let premiumMember = false;
+let offerExpired = false;
+
+let canOfferApply = (premiumMember || (cartSize2 >= minCartSize)) && !offerExpired;
+// console.log(canOfferApply)
+
 let months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 let cartSize = 4;
 let cartRequirement = 2;
@@ -153,15 +169,27 @@ let username = 'codeup';
 let password = 'notastrongpassword';
 
 let password5 = password.length >= 5;
-console.log(password5);
+//console.log(password5);
 
-let onlyPassword = username.substring(0, 5) !== password;
-console.log(onlyPassword);
+let onlyPassword = username.indexOf(username) >= 0;
+//console.log(onlyPassword);
 
 let lessThan20 = username.length <= 20;
-console.log(lessThan20);
+//console.log(lessThan20);
 
 let noWhiteSpace1 = username.indexOf(" ") >= 0;
 let noWhiteSpace2 = password.indexOf(" ") >= 0;
-console.log(noWhiteSpace2);
-console.log(noWhiteSpace1);
+// console.log(noWhiteSpace2);
+// console.log(noWhiteSpace1);
+
+// different solution for problem above
+
+let userlength = username.length;
+let passLength = password.length;
+let firstCharUser = username.substring(0, 1);
+let lastCharUser = username.substring((userlength - 1), userlength);
+let firstCharPass = password.substring(0, 1);
+let lastCharPass = password.substring((passLength - 1), passLength);
+
+let hasWhiteSpace = firstCharUser === ' ' || lastCharUser === ' ' || firstCharPass === ' ' || lastCharPass === ' ';
+console.log(hasWhiteSpace)
