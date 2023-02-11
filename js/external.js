@@ -47,6 +47,7 @@ alert(`${favoriteColor} is my favorite color too!`);
 
 //class schedule problem
 
+
 // let scheduleConflicts = false;
 // let maxClassSize = parseInt(prompt('What is the maximum size of the class?'));
 // let currentClassSize = parseInt(prompt('What is the current size of the class?'));
