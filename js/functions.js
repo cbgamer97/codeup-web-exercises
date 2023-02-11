@@ -124,3 +124,16 @@ function applyDiscount(price, discount,) {
 }
 
 // console.log(applyDiscount(100, .2));
+
+
+(function(){
+
+})();
+
+const initPage = () => {
+
+
+
+
+}
+initPage();
