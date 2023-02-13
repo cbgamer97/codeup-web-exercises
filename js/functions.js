@@ -147,7 +147,7 @@ let tipTotal = alert(tipInDollars);
 // }
 
 const applyDiscount = (price, discount) => {
-    let appliedDiscount = (parseFloat(price) * parseFloat(discount)) - parseFloat(price);
+    let appliedDiscount = parseFloat(price) - (parseFloat(price) * parseFloat(discount));
     let applyDiscDollars = appliedDiscount.toLocaleString("en-US", {style:"currency", currency:"USD"});
     return applyDiscDollars;
 }
