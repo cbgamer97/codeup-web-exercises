@@ -79,7 +79,7 @@ function isTwo(num) {
  */
 
 function calculateTip(total, tip) {
-    let totalTip = (total * tip);
+    let totalTip = (total * (tip / 100));
     let formattedTip = totalTip.toLocaleString("en-US", {style:"currency", currency:"USD"});
     return formattedTip;
 }
@@ -93,11 +93,12 @@ function calculateTip(total, tip) {
  * then display the dollar amount they should tip
  */
 
-let cost = 100;
-let restTotal = parseFloat(prompt(`Your bill was ${cost}, how much would you like to tip?`));
-let costAndTip = cost - (cost * restTotal);
-let formattedCost = costAndTip.toLocaleString("en-US", {style:"currency", currency:"USD"});
-alert(`Your bill total is ${formattedCost}`);
+
+let billTotal = random;
+let restTotal = parseFloat(prompt(`Your bill was ${billTotal}, how much would you like to tip?`));
+let tipTotal = (calculateTip(billTotal, restTotal));
+let formattedCost = tipTotal.toLocaleString("en-US", {style:"currency", currency:"USD"});
+alert(`Your should tip ${formattedCost}`);
 
 /**
  * TODO:
