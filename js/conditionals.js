@@ -22,13 +22,13 @@
  * console.logging the function's return value
  */
 
-// const analyzeColor = input => {
-//     if (input === 'blue') {
-//         return `The ocean is ${input}.`;
-//     } else if (input === 'orange') {
-//         return `The leafs turn ${input} in the fall.`
+// const analyzeColor = color => {
+//     if (color === 'blue') {
+//         return `The ocean is ${color}.`;
+//     } else if (color === 'orange') {
+//         return `The leafs turn ${color} in the fall.`
 //     } else {
-//         return `I don't know anything about ${input}`;
+//         return `I don't know anything about ${color}`;
 //     }
 // }
 
@@ -39,14 +39,18 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
 // console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -72,8 +76,8 @@ const analyzeColor = input => {
  * function to show it to the user.
  */
 
-// let userChoice = prompt("What's your favorite color?");
-// let userColor = analyzeColor(userChoice);
+// const userChoice = prompt("What's your favorite color?");
+// let userColor = analyzeColor(userChoice.toLowerCase());
 // alert(userColor);
 
 /* ########################################################################## */
@@ -99,28 +103,44 @@ const analyzeColor = input => {
  */
 
 const calculateTotal = (luckyNumber, totalAmount) => {
-    switch (luckyNumber) {
-        case 5:
-            return totalAmount - (totalAmount * (100 / 100));
-            break;
-        case 4:
-            return totalAmount - (totalAmount *  (50 / 100));
-            break;
-        case 3:
-            return totalAmount - (totalAmount * (35 / 100));
-            break;
-        case 2:
-            return totalAmount - (totalAmount * (25 / 100));
-            break;
-        case 1:
-            return totalAmount - (totalAmount * (10 / 100));
-            break;
-        default:
-            return totalAmount - (totalAmount * (0 / 100));
+    if (luckyNumber === 5) {
+        return totalAmount - (totalAmount * (100 / 100));
+    } else if (luckyNumber === 4) {
+        return totalAmount - (totalAmount *  (50 / 100));
+    } else if (luckyNumber === 3) {
+        return totalAmount - (totalAmount * (35 / 100));
+    } else if (luckyNumber === 2) {
+        return totalAmount - (totalAmount * (25 / 100));
+    } else if (luckyNumber === 1) {
+        return totalAmount - (totalAmount * (10 / 100));
+    } else {
+        return totalAmount - (totalAmount * (0 / 100));
     }
 }
 
-// console.log(calculateTotal(3, 100));
+// const calculateTotal = (luckyNumber, totalAmount) => {
+//     switch (luckyNumber) {
+//         case 5:
+//             return totalAmount - (totalAmount * (100 / 100));
+//             break;
+//         case 4:
+//             return totalAmount - (totalAmount *  (50 / 100));
+//             break;
+//         case 3:
+//             return totalAmount - (totalAmount * (35 / 100));
+//             break;
+//         case 2:
+//             return totalAmount - (totalAmount * (25 / 100));
+//             break;
+//         case 1:
+//             return totalAmount - (totalAmount * (10 / 100));
+//             break;
+//         default:
+//             return totalAmount - (totalAmount * (0 / 100));
+//     }
+// }
+
+// console.log(formatToLocaleString(calculateTotal(2, 100)));
 
 
 /**
@@ -132,12 +152,20 @@ const calculateTotal = (luckyNumber, totalAmount) => {
  * price before the discount was, and what their price after the discount is.
  */
 
+function formatToLocaleString(number, language='en', country='US', currency='USD'){
+    return parseFloat(number).toLocaleString(`${language}-${country}`,
+        {style: 'currency', currency: currency}
+    );
+}
+
 // Generate a random number between 0 and 6
-// let luckyNumber = Math.floor(Math.random() * 6);
+// const luckyNumber = Math.floor(Math.random() * 6);
 //
 // let userBillTotal = parseFloat(prompt("How much was your bill?"));
-// let discountAlert = alert(`Your lucky number was: ${luckyNumber}. The bill before discounts was ${userBillTotal},
-// and with the discount ${calculateTotal(luckyNumber, userBillTotal)}`);
+// let discountAlert = alert(`Your lucky number was: ${luckyNumber}.
+//  The bill before discounts was ${formatToLocaleString(userBillTotal)},
+//  and with the discount ${formatToLocaleString(calculateTotal(luckyNumber, userBillTotal))}`);
+
 
 /**
  * TODO:
@@ -158,8 +186,8 @@ const calculateTotal = (luckyNumber, totalAmount) => {
  * HINT: The way we prompt for a value could be improved
  */
 
-let confirmDialog = confirm('Would you like to enter a number?');
-let userNumber = parseFloat(prompt("What number would you like to pick?"))
+const confirmDialog = confirm('Would you like to enter a number?');
+const userNumber = parseFloat(prompt("What number would you like to pick?"))
 
 if(userNumber % 2 === 0) {
     alert(`Your number, ${userNumber}, is even!`);
@@ -173,4 +201,27 @@ if (userNumber > 0) {
     alert(`Your number, ${userNumber}, is positive!`);
 } else if (userNumber < 0 ) {
     alert(`Your number, ${userNumber}, is negative`);
+}
+
+const getNumber = () => {
+    const wantsToEnterNumber = confirm("Would you like to enter a number?");
+    if (wantsToEnterNumber) {
+        return parseFloat(prompt("Enter number"));
+    }
+}
+
+const analyzeNumber = (number) => {
+    if(number % 2 === 0) {
+        alert(`Your number, ${number}, is even!`);
+    } else {
+        alert(`Your number, ${number}, is odd!`);
+    }
+
+    alert(`Your number plus 100 is: ${number + 100}`);
+
+    if (number > 0) {
+        alert(`Your number, ${number}, is positive!`);
+    } else if (number < 0 ) {
+        alert(`Your number, ${number}, is negative`);
+    }
 }
