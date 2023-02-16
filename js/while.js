@@ -1,24 +1,46 @@
 "use strict";
 
-let i = 2;
-while (i <= 65536) {
-    console.log(i);
-    i*= 2;
+let i = 1;
+let accumulator = 1;
+while(i <= 16){
+    accumulator *= 2;
+    console.log(accumulator)
+    i++
 }
 
-let i = randomNumber(50, 100);
-console.log(`You need to sell: ${i}`)
+// let a = 2;
+// while (a <= 65536) {
+//     console.log(a);
+//     a*= 2;
+// }
+
+let coneInventory = randomNumber(50, 100);
+console.log(`You need to sell: ${coneInventory}`)
+
+// do {
+//     let conesSold = randomNumber(1, 5);
+//     if (conesSold <= coneInventory) {
+//         coneInventory -= conesSold;
+//         console.log(`${conesSold} sold`);
+//     } else if (conesSold > coneInventory) {
+//         console.log(`Cannot sell you ${conesSold} I only have ${coneInventory} left.`)
+//     }
+//     if (coneInventory === 0){
+//          console.log('I sold all of my cones!')
+//      }
+//
+// } while (coneInventory > 0);
 
 do {
-    let conesSold = randomNumber(1, 5);
-    if (conesSold <= i) {
-        i -= conesSold;
-        console.log(`${conesSold} sold`);
-    } else if (conesSold > i) {
-        console.log(`Cannot sell you ${conesSold} I only have ${i} left.`)
+    let conesWanted = randomNumber(1, 5);
+    if (conesWanted > coneInventory) {
+        console.log(`Cannot sell you ${conesWanted}, I only have ${coneInventory}`);
+        console.log(`${coneInventory} sold...`);
+        coneInventory = 0;
+    } else {
+        console.log(`{conesWanted} sold...`)
+        coneInventory = coneInventory - conesWanted;
     }
-    if (i === 0){
-         console.log('I sold all of my cones!')
-     }
-
-} while (i > 0);
+    console.log(`${coneInventory} left`);
+} while (coneInventory > 0);
+console.log('I sold all of my cones!');
