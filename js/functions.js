@@ -139,12 +139,12 @@ let tipTotal = alert(tipInDollars);
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-// const applyDiscount = (price, discount,) => {
-//     let discountTotal = discountPercent * originalPrice;
-//     let billTotal = originalPrice - discountTotal;
-//     let formattedBill = billTotal.toLocaleString("en-US", {style:"currency", currency:"USD"});
-//     return formattedBill;
-// }
+const applyDiscount = (price, discount,) => {
+    let discountTotal = discountPercent * originalPrice;
+    let billTotal = originalPrice - discountTotal;
+    let formattedBill = billTotal.toLocaleString("en-US", {style:"currency", currency:"USD"});
+    return formattedBill;
+}
 
 const applyDiscount = (price, discount) => {
     let appliedDiscount = parseFloat(price) - (parseFloat(price) * parseFloat(discount));

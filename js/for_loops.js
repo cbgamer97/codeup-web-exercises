@@ -38,12 +38,12 @@ for (let i = 1; i < 11; i++) {
 
 
 
-// const numberPyramid = (rows) => {
-//     for (let i = 1; i <= rows; i++){
-//         console.log(`${i}`.repeat(i));
-//     }
-// }
-//  numberPyramid(9);
+const numberPyramid = (rows) => {
+    for (let i = 1; i <= rows; i++){
+        console.log(`${i}`.repeat(i));
+    }
+}
+ numberPyramid(9);
 
 for (let i = 100; i >= 5; i-= 5) {
     console.log(i);

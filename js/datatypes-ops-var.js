@@ -131,16 +131,16 @@ let currentClassSize = 24;
 let canEnroll = !scheduleConflicts && (currentClassSize < maxClassSize);
 console.log(canEnroll);
 
-// let classSize = 19;
-// let fullClass = 25;
-// let classTime = 2;
-// let classStart = 12;
-//
-// if (classSize < fullClass && classStart !== classTime) {
-//     console.log("You may enroll in this class!");
-// } else {
-//     console.log("You may not enroll.")
-// }
+let classSize = 19;
+let fullClass = 25;
+let classTime = 2;
+let classStart = 12;
+
+if (classSize < fullClass && classStart !== classTime) {
+    console.log("You may enroll in this class!");
+} else {
+    console.log("You may not enroll.")
+}
 
 let minCartSize = 2;
 let cartSize2 = 3;

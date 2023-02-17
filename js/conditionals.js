@@ -22,15 +22,15 @@
  * console.logging the function's return value
  */
 
-// const analyzeColor = color => {
-//     if (color === 'blue') {
-//         return `The ocean is ${color}.`;
-//     } else if (color === 'orange') {
-//         return `The leafs turn ${color} in the fall.`
-//     } else {
-//         return `I don't know anything about ${color}`;
-//     }
-// }
+const analyzeColor = color => {
+    if (color === 'blue') {
+        return `The ocean is ${color}.`;
+    } else if (color === 'orange') {
+        return `The leafs turn ${color} in the fall.`
+    } else {
+        return `I don't know anything about ${color}`;
+    }
+}
 
 // console.log(analyzeColor('blue'));
 
@@ -76,9 +76,9 @@ const analyzeColor = input => {
  * function to show it to the user.
  */
 
-// const userChoice = prompt("What's your favorite color?");
-// let userColor = analyzeColor(userChoice.toLowerCase());
-// alert(userColor);
+const userChoice = prompt("What's your favorite color?");
+let userColor = analyzeColor(userChoice.toLowerCase());
+alert(userColor);
 
 /* ########################################################################## */
 
@@ -118,27 +118,27 @@ const calculateTotal = (luckyNumber, totalAmount) => {
     }
 }
 
-// const calculateTotal = (luckyNumber, totalAmount) => {
-//     switch (luckyNumber) {
-//         case 5:
-//             return totalAmount - (totalAmount * (100 / 100));
-//             break;
-//         case 4:
-//             return totalAmount - (totalAmount *  (50 / 100));
-//             break;
-//         case 3:
-//             return totalAmount - (totalAmount * (35 / 100));
-//             break;
-//         case 2:
-//             return totalAmount - (totalAmount * (25 / 100));
-//             break;
-//         case 1:
-//             return totalAmount - (totalAmount * (10 / 100));
-//             break;
-//         default:
-//             return totalAmount - (totalAmount * (0 / 100));
-//     }
-// }
+const calculateTotal = (luckyNumber, totalAmount) => {
+    switch (luckyNumber) {
+        case 5:
+            return totalAmount - (totalAmount * (100 / 100));
+            break;
+        case 4:
+            return totalAmount - (totalAmount *  (50 / 100));
+            break;
+        case 3:
+            return totalAmount - (totalAmount * (35 / 100));
+            break;
+        case 2:
+            return totalAmount - (totalAmount * (25 / 100));
+            break;
+        case 1:
+            return totalAmount - (totalAmount * (10 / 100));
+            break;
+        default:
+            return totalAmount - (totalAmount * (0 / 100));
+    }
+}
 
 // console.log(formatToLocaleString(calculateTotal(2, 100)));
 
