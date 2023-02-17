@@ -24,11 +24,14 @@
      * accessing each element's index.
      */
 
-    console.log(names[0]);
-    console.log(names[1]);
-    console.log(names[2]);
-    console.log(names[3]);
-    console.log(names[4]);
+
+
+
+    // console.log(names[0]);
+    // console.log(names[1]);
+    // console.log(names[2]);
+    // console.log(names[3]);
+    // console.log(names[4]);
 
     /**
      * TODO:
@@ -37,8 +40,7 @@
      */
 
     for(let i = 0; i < names.length; i++){
-        let name = names[i];
-        console.log(name);
+        console.log(name[i]);
     }
 
     /**
@@ -46,7 +48,7 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach((name) => {
+    names.forEach(function(name) {
         console.log(name);
     })
 
@@ -64,21 +66,19 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    const first = (input) => {
-        input = [1, 2, 3, 4, 5];
-        return input[0];
+    const first = (array) => {
+        return array[0];
     }
-    console.log(first());
+   // console.log(first());
 
-    const second = (input) => {
-            input = [1, 2, 3, 4, 5];
-            return input[1];
+    const second = (array) => {
+            return array[1];
         }
-    console.log(second());
+   // console.log(second());
 
-    const last = (input) => {
-            input = [1, 2, 3, 4, 5];
-            return input[4];
+    const last = (array) => {
+        const arrayLength = array.length;
+        return array[arrayLength - 1];
         }
-    console.log(last());
+   // console.log(last());
 })();
