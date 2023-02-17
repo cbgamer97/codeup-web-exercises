@@ -151,6 +151,13 @@ const doMath = (operator, a, b) => {
 // 1. Create a function that will return how many whitespace characters are at the
 // beginning and end of a string.
 
+const whiteSpace = (input) => {
+    let trimmed = input.trim();
+    //let spaces = trimmed.length;
+    return trimmed;
+}
+console.log(whiteSpace('  greetings   '));
+
 
 // 1. Create a function that takes in two string inputs.
 //
