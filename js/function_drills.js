@@ -1,5 +1,9 @@
 // # Function Drills
-//
+
+
+
+
+
 // Functions using conditionals but not loops or arrays:
 //
 //     - Make a function named `isOdd(number)`
@@ -241,68 +245,170 @@ console.log(invertSign(100));
 // spaces, newline characters, or tabs.
 // - Make a function named `trim(string)` that removes empty spaces before and
 // after the input.
+
+const trim = (string) => {
+    return string.trim();
+}
+
 // - Make a function named `areEqual(input1, input2)` that returns if both inputs
 // have the same value
+
+const areEqual = (input1, input2) => {
+    return input1 == input2;
+}
+
 // - Make a function named `areIdentical(input1, input2)` that returns if both
 //     inputs are same value and data type.
+
+const areIdentical = (input1, input2) => {
+    return input1 === input2;
+}
+
 // - Make a function named `not(input)` returns the input with a flipped boolean
+
+const not = (input) => {
+    return !input;
+}
+
 // - Make a function named `notNot(input)` that the negation of the negation of the
 // input.
+
+const notNot = (input) => {
+    return !!input;
+}
+
 // - Make a function named `and(predicate1, predicate2)` that returns the logical
 // operation of AND
+
+const and = (predicate1, predicate2) => {
+    return predicate1 && predicate2;
+}
+
 // - Make a function named `or(predicate1, predicate2)` that returns the logical
 // operation of OR
+
+const or = (predicate1, predicate2) => {
+    return predicate1 || predicate2;
+}
+
 // - Write a function called `reverseString(string)` that reverses a string
+
+const reverseString = (string) => {
+    let splitString = string.split('');
+    let reverse = splitString.reverse();
+    let reveresedString = reverse.join('');
+    return reveresedString;
+}
+
+// console.log(reverseString('hello world'));
+
 // - Make a function named `absoluteValue(number)` that returns the absolute value
 // of a number.
+
+const absoluteValue = (number) => {
+    return Math.abs(number);
+}
+
 // - Make a function named `rollDice(sides)` that takes in an argument containing
 // the number of sides the die should have. Generate a random number between 1 up
 // to and including the number of sides.
-//
-//
-//
+
+const rollDice = (sides) => {
+    sides = randomNumber(1, 20);
+    return `The die has ${sides} sides.`
+}
+
 // ## Simple Function Drills
 //
 // 1. Make a function called returnTwo() that returns the number 2 when called
-//
+
+const returnTwo = () => {
+    return 2;
+}
+
+
 // Test this function with `console.log(returnTwo())`
 //
 //     1. Make a function called sayHowdy() which console.logs the string "Howdy!"
-//
+
+const sayHowdy = () => {
+    console.log('Howdy');
+}
+
 // Test this function by directly calling `sayHowdy()`
 //
 // Remember this function does not need a defined return value
-//
+
+
 // 1. Make a function called returnName() that returns the string of your name
-//
+
+const returnName = () => {
+    return 'Connor';
+}
+
+
 // Test this function with `console.log(returnName())`
 //
 //     1. Make a function called addThree() which takes in a number input and returns the number plus 3.
-//
+
+const addThree = (number) => {
+    return number + 3;
+}
+
 // Test this function with `console.log(addThree(5))`
 //
 //     1. Make a function called sayString() which returns the string input passed in.
-//
-// Test this function with `console.log(sayString('codeup'))`
+
+const sayString = (string) => {
+    return string;
+}
+
+ // console.log(sayString('codeup'))
 //
 //
 //     ## Challenge Function Drills
 //
 // - Write a function called `identity(input)` that takes in an argument called
 // input and returns that input.
-//
+
+const id = (input) => {
+    return input;
+}
+
+
 // - Write a function called `getRandomNumber(min, max)` that returns a random
 // number between min and max values sent to that function call.
-//
+
+const randomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
 // - Write a function called `first(input)` that returns the first character in the
 // provided string.
-//
+
+const first = (input) => {
+    let splitInput = input.split('');
+    let firstLetter = splitInput[0];
+    return firstLetter;
+}
+// console.log(first('hello'));
+
 // - Write a function called `last(input)` that returns the last character of a
 // string
-//
+
+const last = (input) => {
+    let splitInput = input.split('');
+    let lastLetter = splitInput[4];
+    return lastLetter;
+}
+// console.log(last('hello'));
+
 // - Write a function called `rest(input)` that returns everything but the first
 // character of a string.
-//
+
+
+
 // - Write a function called `reverse(input)` that takes a string and returns it
 // reversed.
 //
