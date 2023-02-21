@@ -14,7 +14,10 @@
 
     const person = {
         firstName: 'Connor',
-        lastName: 'Brinkley'
+        lastName: 'Brinkley',
+        sayHello: function () {
+            return `Hello, ${this.firstName} ${this.lastName}`;
+        }
     }
 
     /**
@@ -27,8 +30,8 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = ('Hello from')
-    console.log(person.sayHello + person.firstName + person.lastName);
+    // person.sayHello = ('Hello from')
+    // console.log(person.sayHello + person.firstName + person.lastName);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -50,20 +53,27 @@
         {name: 'George', amount: 320}
     ];
 
-    const discount = (num) => {
-        if (num > 200) {
-            return num * .12;
-        } else {
-            return 0;
-        }
-    }
+    shoppers.forEach(shopper => {
+        const discount = shopper.amount > 200 ? shopper.amount * .12 : 0;
+        const total = shopper.amount - discount;
+        console.log(`${shopper.name} -- total: ${formatToLocaleString(shopper.amount)}, 
+        discount: ${formatToLocaleString(discount)}, final total: ${formatToLocaleString(total)}`)
+    });
 
-
-shoppers.forEach(({name, amount}) =>
-    console.log(`Greetings ${name}, your original total was: ${formatToLocaleString(amount)}.
-    Your discount will be ${formatToLocaleString(discount(amount))}.
-    Your new total is: ${formatToLocaleString(amount - discount(amount))}`)
-);
+//     const discount = (num) => {
+//         if (num > 200) {
+//             return num * .12;
+//         } else {
+//             return 0;
+//         }
+//     }
+//
+//
+// shoppers.forEach(({name, amount}) =>
+//     console.log(`Greetings ${name}, your original total was: ${formatToLocaleString(amount)}.
+//     Your discount will be ${formatToLocaleString(discount(amount))}.
+//     Your new total is: ${formatToLocaleString(amount - discount(amount))}`)
+// );
 
 
     /** TODO:
@@ -141,11 +151,16 @@ shoppers.forEach(({name, amount}) =>
      *      ---
      *      ...
      */
-    let plusOne = 1;
 
-    books.forEach(({title, author}) =>
-        console.log(`Book # ${plusOne++}\nTitle: ${title}\nAuthor: ${author.firstName} ${author.lastName}`));
+    // books.forEach(({title, author, index}) =>
+    //     console.log(`Book # ${index + 1}\nTitle: ${title}\nAuthor: ${author.firstName} ${author.lastName}`));
 
+    books.forEach((book, index) => {
+        console.log('Book #' + (index + 1));
+        console.log('title: ' + book.title);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+        console.log('---');
+    });
 
     /**
      * Bonus:
@@ -157,5 +172,19 @@ shoppers.forEach(({name, amount}) =>
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+    const createBook = (title, authorName) => {
+        console.log(`Book # ${plusOne ++}`);
+        console.log(`Title: ${title}`);
+        console.log(`Author: ${authorName}`)
+
+    };
+
+
+    books.forEach(function (book) {
+        console.log(books.title);
+        console.log(`${books.author.firstName} ${books.author.lastName}`);
+    })
 
 })();
