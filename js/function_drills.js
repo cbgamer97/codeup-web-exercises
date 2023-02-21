@@ -88,10 +88,25 @@ const isTrue = (boolean) => {
 }
 
 // - Make a function named `isFalse(boolean)`
+
+function isFalse (boolean) {
+    return false;
+}
+
 // - Make a function named `isTruthy(input)`, remember that values other than true
 // will behave like true
+
+function isTruthy (input) {
+    return !input;
+}
+
 // - Make a function named `isFalsy(input)`, remember that values other than false
 // behave like false
+
+function isFalsy (input) {
+    return !input;
+}
+
 // - Make a function named `isVowel(letter)`
 
 const isVowel = (letter) => {
@@ -118,12 +133,43 @@ const isVowel = (letter) => {
 }
 
 // - Make a function named `isConsonant(letter)`
+
+function isConsonant (letter) {
+    if (letter !== 'a' || letter !== 'e' || letter !== 'i' || letter !== 'o' || letter !== 'u') {
+        return true;
+    }
+}
+
 // - Make a function named `isCapital(letter)`
+
+function isCapital (letter) {
+    return /[A-Z]/.test(letter);
+}
+
 // - Make a function named `isLowerCase(letter)`
+
+function isLowerCase (letter) {
+    return /[a-z]/.test(letter);
+}
+
 // - Make a function named `hasLowerCase(string)` that returns if a string has any
 // lower cased letter
+
+function hasLowerCase(string) {
+    if (string === /[a-z]/.test(string)){
+        return string;
+    }
+}
+
 // - Make a function named `isSpace(letter)` that returns if a character is a space
 // character
+
+function isSpace (letter) {
+    if (letter.includes(" ")){
+        return letter;
+    }
+}
+
 // - Make a function named `isZero(number)`
 
 const isZero = (number) => {
@@ -146,6 +192,11 @@ const notZero = (input) => {
 }
 
 // - Write a function named `lowerCase(string)`
+
+function lowerCase(string) {
+    return string.toLowerCase();
+}
+
 // - Write a function named `double(n)` that returns a number times two
 
 const double = (n) => {
@@ -240,9 +291,26 @@ const invertSign = (number) => {
 console.log(invertSign(100));
 
 // - Write a function named `degreesToRadians(number)`
+
+function degreesToRadians (number) {
+    return number * (Math.PI / 180);
+}
+
 // - Write a function named `radiansToDegrees(number)`
+
+function radiansToDegrees (number) {
+    return number / (Math.PI / 180);
+}
+
 // - Make a function named `isBlank(input)` that determines if a given input is
 // spaces, newline characters, or tabs.
+
+function isBlank (input){
+    if (input.includes(" ") || input.includes('\n' || input.includes('\t'))) {
+        return true;
+    }
+}
+
 // - Make a function named `trim(string)` that removes empty spaces before and
 // after the input.
 

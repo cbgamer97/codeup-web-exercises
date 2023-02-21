@@ -156,7 +156,7 @@ const whiteSpace = (input) => {
     //let spaces = trimmed.length;
     return trimmed;
 }
-console.log(whiteSpace('  greetings   '));
+// console.log(whiteSpace('  greetings   '));
 
 
 // 1. Create a function that takes in two string inputs.
@@ -168,13 +168,37 @@ console.log(whiteSpace('  greetings   '));
 // string.
 // - If the second string input is not present in the first, return the first
 // string as entered in the function.
-//
+
+// function twoStrings(input1, input2) {
+//     if (input2 === input1) {
+//         return
+//     }
+// }
+
+
 // 1. Create a function that takes in a string and returns true if the last letter
 // is an "a" (otherwise, return false).
-//
+
+function lastIsA (input) {
+    if (input.endsWith('a')) {
+        return 'It ends with a!';
+    } else {
+        return false;
+    }
+}
+
+// console.log(lastIsA('baa'));
+
 // 1. EXTRA CHALLENGE: create a function that will return how many whitespace
 // characters are at the beginning of a string (hint: use regex).
-//
+
+function beginningSpace (input) {
+    let whiteSpace = input.trimStart().length;
+    return whiteSpace;
+};
+
+console.log(beginningSpace('   hello!'));
+
 // 1. Create a function `returnTrueMessage()` that returns the string "Hey, it's true!"
 //
 // - Create a function `returnFalseMessage()` that returns the string "Hey, it's false!"
