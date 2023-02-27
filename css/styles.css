@@ -1,0 +1,17 @@
+/*p {*/
+/*    color: #000000; */
+/*    text-transform: uppercase;*/
+/*}*/
+
+.red-paragraph {
+    color: #000000;
+    text-transform: uppercase;
+}
+
+#paragraph1 {
+    font-style: italic;
+}
+
+.red-paragraph.smaller-font {
+    font-size: 10px;
+}
