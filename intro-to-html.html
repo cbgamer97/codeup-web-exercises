@@ -1,20 +1,44 @@
+<!--document header must be on every html page-->
 <!DOCTYPE html>
+<!---->
+<!--Declaring html also required after doctype html-->
 <html lang="en">
+<!--   Some tags have opening and closing tags <opening tag> </closing tag>    -->
+<!--   Some tags do not need closing tags and are self closing <self closing tag/>   -->
+
+<!--   Must of an opening and closing <headtag><headtag/> to hold data about the page  -->
 <head>
+<!--    <meta/> holds keyboard info, and other information pertaining to page    -->
     <meta charset="UTF-8"/>
+<!--    <title><title/> displays info on the tabs of an internet  page   -->
     <title>Into to HTML</title>
+<!--    <link><link/> allows you to link a css stylesheet similarly to how we link javaScript just with different tags -->
+<!--    THERE IS NO CSS FOR THIS I JUST PUT THIS IN AS AN EXAMPLE FOR YOU-->
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
+<!--  <body><body/> HOLDS ALL OF THE VISUAL DATA THAT WE SEE ON A WEBPAGE -->
 <body>
+<!--  HEADER TAGS GO IN ORDER OF IMPORTANCE, THEY ORDER FROM <h1><h1/> to <h6><h6/>  -->
+<!--  SHOULD TYPICALLY ONLY HAVE 1 <h1><h1/> PER PAGE  -->
     <h1>This is my website header!</h1>
     <h2>This is header 2 text</h2>
-
+<!--  <p><p/> tag allows you to add blocks of text to a page  -->
+<!--    IN ORDER TO GET FILLER TEXT TYPE lorem THEN HIT TAB   -->
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci, beatae commodi doloribus dolorum facilis fugiat ipsam itaque labore laudantium molestias, numquam officia omnis perspiciatis quasi reprehenderit tempora tenetur vero?</p>
+<!--    THE TAGS ABOVE ARE EXAMPLES OF BLOCK LEVEL ELEMENTS WHICH WILL ALWAYS TAKE A NEW LINE FOR THEMSELVES    -->
 
+<!--    THE TAGS BELOW ARE INLINE TAGS AND WILL POPULATE THE SAME LINE AS EVERYTHING BEFORE IT -->
+<!--    WHEN WORKING WITH INLINE TAGS YOU CAN ADD A <br/> BREAK TAG WHICH WILL PUSH THE TAG TO THE NEXT LINE  -->
+    <br>
+<!--<img/> IS A SELF CLOSING TAG FOR LINKING IMAGES TO A PAGE   -->
+<!-- alt="" IS VERY IMPORTANT AS IT GIVES A DESCRIPTION OF THE PICTURE FOR SCREEN READERS   -->
     <img src="images/download.jpeg" width="500" alt="Rivendell"/>
-
+<!-- <a><a/> THE ANCHOR TAG ALLOWS YOU TO LINK IMAGES OR TEXT TO OTHER PAGES ON THE INTERNET OR ON YOUR WEBSITE  -->
     <a href=""></a>
 
+<!--    SCRIPT GOES AT THE END OF THE BODY IN ORDER TO ALLOW THE PAGE TO LOAD MORE IMPORTANT INFORMATION FIRST  -->
     <script src="js/intro-to-html.js"></script>
+
+<!--    CLOSING TAGS FOR THE BODY AND THE ENTIRE HTML PAGE  -->
 </body>
 </html>
