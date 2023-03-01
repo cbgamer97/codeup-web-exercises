@@ -1,0 +1,17 @@
+header.container {
+    height: 80px;
+    border-bottom: 1px solid #000000;
+}
+
+.container.hero-scene {
+    height: 80vh;
+    background-color: #4873b2;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.container.features {
+    padding: 40px 0;
+}
