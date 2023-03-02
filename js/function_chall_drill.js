@@ -200,8 +200,15 @@ function beginningSpace (input) {
 console.log(beginningSpace('   hello!'));
 
 // 1. Create a function `returnTrueMessage()` that returns the string "Hey, it's true!"
-//
+function returnTrueMessage () {
+    return "Hey it's true!"
+}
 // - Create a function `returnFalseMessage()` that returns the string "Hey, it's false!"
+
+function returnFalseMessage () {
+    return "Hey, it's false!"
+}
+
 // - Create a function `returnMessage()` that takes in a function and returns the call to the function
 // - Experiement passing in different functions.
 //
@@ -212,3 +219,96 @@ console.log(beginningSpace('   hello!'));
 // password and the user is at least 18 years old. If the user is an admin,
 //     they do not have to be a certain age but the password must still not match
 // the username.
+
+/**
+ * Convert Address to Object
+ * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and
+ * street name separated by a space characters, and returns an object with properties streetNumber and streetName.
+ *
+ * Examples
+ *
+ * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
+ * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
+ **/
+
+const convertAddressToObject = (input) => {
+    let numbersIndex = input.indexOf(' ');
+    let addressNumber = input.substring(0, numbersIndex);
+    let nameIndex = input.indexOf(' ');
+    let addressName = input.substring(nameIndex);
+    return {streetNumber: addressNumber, streetName: addressName}
+}
+
+console.log(convertAddressToObject('8646 Sunny Oaks'));
+
+/**
+ * Count total pets
+ * Write a function named totalPets that accepts an array of objects where each object represents a person,
+ * and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
+ *
+ * Examples
+ *
+ * >> totalPets([
+ *       {name: 'Fernando Mendoza', pets: 1},
+ *       {name: 'Douglas Hirsh', pets: 8},
+ *       {name: 'Kenneth Howell', pets: 2}
+ *    ]) ➞ 11
+ */
+
+ totalPets([
+     {name: 'Fernando Mendoza', pets: 1},
+       {name: 'Douglas Hirsh', pets: 8},
+       {name: 'Kenneth Howell', pets: 2}
+    ]);
+
+
+// function totalPets(personsArray) {
+//     let total = 0;
+//     for (let i = 0; i < personsArray.length; i++){
+//         total += personsArray[i].pets
+//     }
+//     return total;
+// }
+
+function totalPets(personsArray) {
+    let total = 0;
+    personsArray.forEach(person => total += person.pets);
+    return total;
+}
+
+/**
+ * Drink Sorting
+ * You will be given an array of drinks, with each drink being an object with two properties: name and price.
+ * Create a function named sortDrinkByPrice that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.
+ *
+ * Assume that the following array of drink objects needs to be sorted:
+ * drinks = [
+ *     {name: "lemonade", price: 50},
+ *     {name: "lime", price: 10}
+ * ]
+ *
+ * Examples
+ * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
+ */
+
+function sortDrinkByPrice (drink) {
+
+}
+
+/**
+ * Get Sum of People's Budget
+ * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+ *
+ * Examples
+ *
+ * >> getBudgets([
+ *        { name: "John", age: 21, budget: 23000 },
+ *        { name: "Steve",  age: 32, budget: 40000 },
+ *        { name: "Martin",  age: 16, budget: 2700 }
+ *    ]) ➞ 65700
+ * >> getBudgets([
+ *        { name: "John",  age: 21, budget: 29000 },
+ *        { name: "Steve",  age: 32, budget: 32000 },
+ *        { name: "Martin",  age: 16, budget: 1600 }
+ *    ]) ➞ 62600
+ */
