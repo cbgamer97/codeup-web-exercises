@@ -103,7 +103,7 @@
 /* Combo classes to extend the column's versatility */
 
 .column.shrink {
-    flex: 0 1 80px;
+    flex: 0 1 auto;
 }
 
 .column.text-center{
@@ -125,4 +125,3 @@
 .column.justify-space-between {
     justify-content: space-between;
 }
-

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Layout Elements</title>
+    <title>Layout Elements Exercise</title>
     <link rel="stylesheet" href="css/resets.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/layout-elements-exercise.css">
@@ -12,18 +12,26 @@
         <header class="container justify-center">
             <div class="row align-center">
                 <div class="column shrink">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 14C20 11.7909 21.7909 10 24 10V10C26.2091 10 28 11.7909 28 14V14C28 16.2091 26.2091 18 24 18V18C21.7909 18 20 16.2091 20 14V14Z" fill="#979797"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14C0 11.7909 1.79086 10 4 10V10C6.20914 10 8 11.7909 8 14V14C8 16.2091 6.20914 18 4 18V18C1.79086 18 0 16.2091 0 14V14Z" fill="#979797"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 24C10 21.7909 11.7909 20 14 20V20C16.2091 20 18 21.7909 18 24V24C18 26.2091 16.2091 28 14 28V28C11.7909 28 10 26.2091 10 24V24Z" fill="#6D6D6D"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C10 1.79086 11.7909 0 14 0V0C16.2091 0 18 1.79086 18 4V4C18 6.20914 16.2091 8 14 8V8C11.7909 8 10 6.20914 10 4V4Z" fill="#6D6D6D"/>
-                    </svg>
+                    <div class="logo-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 14C20 11.7909 21.7909 10 24 10V10C26.2091 10 28 11.7909 28 14V14C28 16.2091 26.2091 18 24 18V18C21.7909 18 20 16.2091 20 14V14Z" fill="#979797"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14C0 11.7909 1.79086 10 4 10V10C6.20914 10 8 11.7909 8 14V14C8 16.2091 6.20914 18 4 18V18C1.79086 18 0 16.2091 0 14V14Z" fill="#979797"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 24C10 21.7909 11.7909 20 14 20V20C16.2091 20 18 21.7909 18 24V24C18 26.2091 16.2091 28 14 28V28C11.7909 28 10 26.2091 10 24V24Z" fill="#6D6D6D"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C10 1.79086 11.7909 0 14 0V0C16.2091 0 18 1.79086 18 4V4C18 6.20914 16.2091 8 14 8V8C11.7909 8 10 6.20914 10 4V4Z" fill="#6D6D6D"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="column">
-                    <nav class="row justify-right">
-                        <div class="column shrink"><a href="#" title="Go home">Home</a></div>
-                        <div class="column shrink"><a href="#" title="Go to overview">Overview</a></div>
-                        <div class="column shrink"><a href="#" title="Go to features">Features</a></div>
+                <div class="column justify-center align-right">
+                    <nav class="navigation">
+                        <div class="column menu-item">
+                            <a href="#" title="home">Home</a>
+                        </div>
+                        <div class="column menu-item">
+                            <a href="#" title="overview">Overview</a>
+                        </div>
+                        <div class="column menu-item">
+                            <a href="#" title="features">Features</a>
+                        </div>
                     </nav>
                 </div>
                 <div class="column shrink">
@@ -31,58 +39,67 @@
                 </div>
             </div>
         </header>
-        <section class="container grow hero-scene">
-            <div class="row full-width">
-                <div class="column align-center text-center">
+        <section class="container hero-scene justify-center">
+            <div class="row">
+                <div class="column justify-center">
                     <div class="hero-text">
-                        <p>An Exercise in Web Layouts</p>
-                        <h1>We are all masters of the front end.</h1>
+                        <p class="subtitle">An Exercise in Web Layouts</p>
+                        <h1 class="hero-h1">We are all masters of the frontend.</h1>
                         <p>Home is behind, the world ahead and there are many paths to tread through shadows to the.</p>
                     </div>
                 </div>
-                <div class="column align-center">
-                    <div class="color-box">
-                        <img src="images/AAAAAA.webp">
+                <div class="column">
+                    <div class="hero-image-wrapper">
+                        <img src="https://dummyimage.com/550x440/979797/979797.jpg" alt="placeholder image">
                     </div>
                 </div>
             </div>
         </section>
-        <footer class="container">
+        <section class="container features">
             <div class="row">
-                <div class="column foot-header text-center">
-                    <div class="header2">
-                    <h2>Features</h2>
+                <div class="column align-center">
+                    <div class="section-text">
+                        <h2 class="header2">Features</h2>
+                        <p>Home is behind, the world ahead and there are many paths to tread through shadows to the edge, and there are.</p>
                     </div>
-                <div class="column para">
-                    <p>Home is behind, the world ahead and there are many paths to tread through shadows to the.</p>
-                </div>
                 </div>
             </div>
-            <div class="row features">
-                <div class="column circles"></div>
-                <div class="column circles"></div>
-                <div class="column circles"></div>
-                <div class="column circles"></div>
+            <div class="row features-row">
+                <div class="column align-center">
+                    <div class="feature-image-wrapper">
+                        <img src="https://dummyimage.com/550x440/979797/979797.jpg">
+                    </div>
+                    <h3 class="header3">Feature Title</h3>
+                    <p>it's a dangerous business, Frodo, going out your door. You step onto the road
+                    </p>
+                </div>
+                <div class="column align-center">
+                    <div class="feature-image-wrapper">
+                        <img src="https://dummyimage.com/550x440/979797/979797.jpg">
+                    </div>
+                    <h3 class="header3">Feature Title</h3>
+                    <p>Three Rings for the Elven-kings under the sky, Seven for the Dwarf-lords in halls of stone
+                    </p>
+                </div>
+                <div class="column align-center">
+                    <div class="feature-image-wrapper">
+                        <img src="https://dummyimage.com/550x440/979797/979797.jpg">
+                    </div>
+                    <h3 class="header3">Feature Title</h3>
+                    <p>Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne in the Land of Mordor
+                    </p>
+                </div>
+                <div class="column align-center">
+                    <div class="feature-image-wrapper">
+                        <img src="https://dummyimage.com/550x440/979797/979797.jpg">
+                    </div>
+                    <h3 class="header3">Feature Title</h3>
+                    <p>Where the Shadows lie. One Ring to rule them all, One Ring to find them, One Ring to being them all
+                    </p>
+                </div>
             </div>
-            <div class="row justify-center align-center">
-                <div class="column text-center">
-                    <h3>Feature Title</h3>
-                    <p>It's a dangerous business, Frodo, going out your door. You step on the road</p>
-                </div>
-                <div class="column text-center">
-                    <h3>Feature Title</h3>
-                    <p>Three rings for the elven-kings under the sky, seven for the Dwarf Lords in their halls of stone</p>
-                </div>
-                <div class="column text-center">
-                    <h3>Feature Title</h3>
-                    <p>Nine for mortal men doomed to die. One for the dark lord on his dark throne in the land of mordor</p>
-                </div>
-                <div class="column text-center">
-                    <h3>Feature Title</h3>
-                    <p>Where the shadows lie. One ring to rule them all, one ring to find them, one ring to rule them all</p>
-                </div>
-            </div>
-        </footer>
+
+        </section>
     </div>
 </body>
 </html>
