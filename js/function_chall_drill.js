@@ -197,7 +197,7 @@ function beginningSpace (input) {
     return whiteSpace;
 };
 
-console.log(beginningSpace('   hello!'));
+// console.log(beginningSpace('   hello!'));
 
 // 1. Create a function `returnTrueMessage()` that returns the string "Hey, it's true!"
 function returnTrueMessage () {
@@ -239,7 +239,7 @@ const convertAddressToObject = (input) => {
     return {streetNumber: addressNumber, streetName: addressName}
 }
 
-console.log(convertAddressToObject('8646 Sunny Oaks'));
+// console.log(convertAddressToObject('8646 Sunny Oaks'));
 
 /**
  * Count total pets
