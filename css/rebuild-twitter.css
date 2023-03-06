@@ -1,0 +1,38 @@
+.left-sidebar .right-sidebar {
+    flex: 0 1 250px;
+}
+
+.left-sidebar {
+    border-right: 1px solid #c2c2c2;
+}
+
+.right-sidebar {
+    border-left: 1px solid #c2c2c2;
+}
+
+.logo-wrapper {
+    width: 55px;
+    height: 55px;
+    padding: 12px;
+    transition: all ease .3s;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.logo-wrapper:hover {
+    background-color: #4873b2;
+}
+
+.menu-item {
+    display: flex;
+    padding: 15px 30px 15px 17px;
+    gap: 20px;
+    align-items: center;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.menu-item:hover {
+    background-color: lightgray;
+}
