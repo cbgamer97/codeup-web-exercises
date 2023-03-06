@@ -1,0 +1,8 @@
+body {
+    background-color: #676666;
+}
+
+.email-password .column {
+    height: 10vw;
+    border: 3px solid;
+}

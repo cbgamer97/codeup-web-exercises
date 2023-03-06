@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <header class="container">
+            <div class="row">
+                <div class="column justify-center align-center">
+                    <h1>Forms Exercise</h1>
+                </div>
+            </div>
+        </header>
+        <div class="container email-password">
+            <div class="row">
+                <div class="column justify-center align-center">
+                    <div class="enter-info">
+                        <h2>Please enter your email and password.</h2>
+                    </div>
+                    <div class="email">
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="text" name="email">
+                    </div>
+                    <div class="password">
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" name="password">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bio-div">
+            <div class="row">
+                <div class="column justify-center align-center">
+                    <div class="bio-header">
+                        <h2>Here's where you can tell us about yourself!</h2>
+                    </div>
+                    <div class="bio">
+                        <textarea name="bio" rows="10" cols="50" placeholder="Give us a quick Bio of yourself!"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container radios">
+            <div class="row">
+                <div class="column justify-center align-center">
+                    <div class="hear-about-us">
+                        <h2>How did you hear about us?</h2>
+                    </div>
+                    <div class="radio-buttons">
+                        <lable for="billboard">Billboard</lable>
+                        <input id="billboard" type="radio" name="select" value="billboard"><br>
+                    </div>
+                    <div class="radio-buttons">
+                        <label for="radio-advertisement">Radio Advertisement</label>
+                        <input id="radio-advertisement" type="radio" name="select" value="radio-advertisement"><br>
+                    </div>
+                    <div class="radio-buttons">
+                        <label for="internet-advertisement">Internet Advertisement</label>
+                        <input id="internet-advertisement" type="radio" name="select" value="internet-advertisement"><br>
+                    </div>
+                    <div class="radio-buttons">
+                        <label for="other">Other</label>
+                        <input id="other" type="radio" name="select" value="other"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container dropdown-section">
+            <div class="row">
+                <div class="column justify-center align-center">
+                    <div class="internet">
+                        <h2>What internet are you using?</h2>
+                    </div>
+                    <div class="options">
+                        <select name="internet-provider">
+                            <option value="att">AT&T</option>
+                            <option value="grande">Grande</option>
+                            <option value="spectrum">Spectrum</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container submit">
+            <div class="row">
+                <div class="column justify-center align-center">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
