@@ -154,3 +154,64 @@ const getBudgets = (array) => {
     array.forEach(object => totalBudget += object.budget);
     return totalBudget;
 }
+
+// Write a function that takes an array of numbers and returns the sum of all the numbers in the array.
+
+const numbers = [1, 2, 3, 4, 5]
+
+const addArray = (array) => {
+
+    let sumOfNumbers = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        sumOfNumbers += array[i];
+    }
+    return sumOfNumbers
+}
+
+// console.log(addArray(numbers));
+
+//     Write a function that takes an array of strings and returns the longest string in the array.
+
+// const returnLongestString = (array) => {
+//     let longestString = "";
+//
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i].length) {
+//
+//         }
+//     }
+//     return longestString;
+// }
+
+//     Write a function that takes an array of numbers and returns a new array with only the even numbers from the original array.
+
+let arrayOfStrings = [1, 2, 10, 11, 13, 15, 18]
+
+const onlyEven = (array) => {
+    let evenNumbers = "";
+    let arrayEven = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            return array[i].toString();
+        }
+    }
+}
+
+console.log(onlyEven(arrayOfStrings));
+
+//     Write a function that takes a string and returns a new string with all the vowels removed.
+//
+//     Write a function that takes an array of strings and returns a new array with the first letter of each string capitalized.
+//
+//     Write a function that takes an array of numbers and returns the largest number in the array.
+//
+//     Write a function that takes a string and returns true if the string is a palindrome, and false otherwise.
+//
+//     Write a function that takes an array of numbers and returns a new array with only the numbers that are greater than 5.
+//
+// Write a function that takes a string and returns a new string with the words in reverse order.
+//
+//     Write a function that takes an array of strings and returns a new array with the strings sorted in alphabetical order.
+
