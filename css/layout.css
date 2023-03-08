@@ -67,6 +67,14 @@
     align-items: center;
 }
 
+.row.justify-left {
+    justify-content: flex-start;
+}
+
+.row.justify-right {
+    justify-content: flex-end;
+}
+
 .row.justify-center {
     justify-content: center;
 }
@@ -77,6 +85,14 @@
 
 .row.justify-space-between {
     justify-content: space-between;
+}
+
+.row.justify-space-around {
+    justify-content: space-around;
+}
+
+.row.justify-space-evenly {
+    justify-content: space-evenly;
 }
 
 .row.no-padding {
@@ -124,6 +140,10 @@
 
 .column.justify-center {
     justify-content: center;
+}
+
+.column.justify-bottom {
+    justify-content: end;
 }
 
 .column.justify-space-between {
