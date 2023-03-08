@@ -1,0 +1,12 @@
+header.container {
+    min-height: 80px;
+    justify-content: end;
+}
+
+ul.nav-links {
+    list-style: none;
+    padding-left: unset;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
