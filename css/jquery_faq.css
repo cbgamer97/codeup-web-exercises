@@ -15,6 +15,6 @@ a {
     margin: 10px 0;
 }
 
-/*.hide {*/
-/*    visibility: visible;*/
-/*}*/
+.highlight {
+    background-color: #6D6D6D;
+}
