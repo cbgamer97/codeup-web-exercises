@@ -157,7 +157,7 @@ const getBudgets = (array) => {
 
 // Write a function that takes an array of numbers and returns the sum of all the numbers in the array.
 
-const numbers = [1, 2, 3, 4, 5]
+// const numbers = [1, 2, 3, 4, 5]
 
 const addArray = (array) => {
 
@@ -367,4 +367,29 @@ function sortCarArray(carsArray) {
     })
 }
 
-console.log(sortCarArray(moreCars))
+// console.log(sortCarArray(moreCars))
+
+let numbers = [1, 2, 3, 4, 5];
+
+// Write a function that takes an array of numbers and returns the sum of all the positive numbers in the array.
+
+const sumOfNumbers = (array) => {
+    let addedNumbers = 0;
+    for (let i = 0; i < array.length; i++){
+        addedNumbers += array[i];
+    }
+    return addedNumbers;
+}
+// console.log(sumOfNumbers(numbers));
+
+// Write a function that takes a string and returns the number of vowels in the string.
+
+const numOfVowels = (input) => {
+    let vowels = 0;
+    if (typeof input === 'string') {
+
+    }
+}
+console.log(numOfVowels('Hello'))
+
+//Write a function that takes a number and returns a string that contains that number of "a" characters.

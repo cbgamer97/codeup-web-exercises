@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-3.6.4.min.js"></script>
+<script>
+    "use strict";
+
+    const cheatCode = [37, 39, 37, 39, 38, 40, 38, 40, 65, 66, 13];
+    let keycode = [];
+    $(document).on('keyup', function(event){
+        keycode.push(event.keyCode);
+        if (keycode.length === cheatCode.length) {
+            for (let i = 0; i < cheatCode.length; i++){
+                if (cheatCode.keyCode === keycode.keyCode) {
+
+                }
+            }
+            alert('You have gained 30 lives!')
+        }
+    });
+</script>
+</body>
+</html>
