@@ -16,5 +16,13 @@ a {
 }
 
 .highlight {
-    background-color: #6D6D6D;
+    background-color: yellow;
+}
+
+button {
+    margin: 10px 0;
+    width: 30vw;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
 }
