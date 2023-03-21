@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id="clickMe">Refresh</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+const getAjaxStore = async () => {
+    try {
+        let response = await fetch(`data/inventory.json`);
+        let data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+(async()=>{
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+    let tools = await getAjaxStore();
+
+
+    for (let i = 0; i < tools.length; i++){
+        $('#insertProducts').append(`
+            <tr>
+                <td>${tools[i].title}</td>
+                <td>${tools[i].quantity}</td>
+                <td>${tools[i].price}</td>
+                <td>${tools[i].categories}</td>
+            </tr>`);
+    }
+
+
+
+    $('#clickMe').on('click', function(){
+        console.log('hello!');
+        $('#insertProducts').reload().children();
+
+    })
+})();
+</script>
+
+</body>
+</html>
