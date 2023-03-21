@@ -26,3 +26,21 @@ button {
     background-color: black;
     color: white;
 }
+
+.box-row {
+    max-width: 100vw;
+}
+
+.picture {
+    aspect-ratio: 1 / 1;
+    border: 9px solid #2f250d;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    max-width: 30%;
+}
