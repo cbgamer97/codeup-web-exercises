@@ -48,5 +48,14 @@
         "outdoor"
     ],
     "price": 200
-    }
+    }, {
+    "title": "impact Drill",
+    "quantity": 5,
+    "categories": [
+        "tool",
+        "indoor",
+        "outdoor"
+    ],
+    "price": 200
+}
 ]

@@ -16,23 +16,15 @@
             <th>Categories</th>
         </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
+    <tbody id="insertProducts">
+
+    </tbody>
 </table>
 <button id="clickMe">Refresh</button>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="js/utils.js"></script>
 <script>
-const getAjaxStore = async () => {
-    try {
-        let response = await fetch(`data/inventory.json`);
-        let data = await response.json();
-        console.log(data);
-        return data;
-    } catch (error) {
-        console.log(error);
-    }
-}
 
 (async()=>{
     "use strict";
@@ -41,26 +33,37 @@ const getAjaxStore = async () => {
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-    let tools = await getAjaxStore();
-
-
-    for (let i = 0; i < tools.length; i++){
-        $('#insertProducts').append(`
-            <tr>
-                <td>${tools[i].title}</td>
-                <td>${tools[i].quantity}</td>
-                <td>${tools[i].price}</td>
-                <td>${tools[i].categories}</td>
-            </tr>`);
+    const getAjaxStore = async () => {
+        try {
+            let response = await fetch(`../data/inventory.json`);
+            let data = await response.json();
+            console.log(data);
+            return data;
+        } catch (error) {
+            console.log(error);
+        }
     }
+    let inventory = await getAjaxStore();
 
+    const pushTable = (inventory) => {
+        inventory.forEach(function(tool){
+            let row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${tool.title}</td>
+                <td>${tool.quantity}</td>
+                <td>${formatToLocaleString(tool.price)}</td>
+                <td>${tool.categories.join(', ')}</td>
+            `
+            document.querySelector('#insertProducts').appendChild(row);
+        });
+    };
+    pushTable(inventory);
 
-
-    $('#clickMe').on('click', function(){
-        console.log('hello!');
-        $('#insertProducts').reload().children();
-
-    })
+    document.querySelector('#clickMe').addEventListener('click', async function (){
+       document.querySelector('#insertProducts').innerHTML = '';
+       let inventory = await getAjaxStore();
+       pushTable(inventory);
+    });
 })();
 </script>
 
