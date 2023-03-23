@@ -50,4 +50,11 @@ restaurants.forEach(restaurant=>{
             <p class="popup">${restaurant.cuisine}</p>
         `)
     marker.setPopup(popup);
+
+})
+
+document.querySelector('#hideMarkers').addEventListener('click', event=>{
+    document.querySelectorAll(".mapboxgl-marker").forEach(svg=>{
+        svg.style.display = 'none';
+    })
 })
