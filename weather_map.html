@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/weather_map.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="doc-title">
+                        <h1>5-Day Weather Forecast</h1>
+                    </div>
+                    <div class="header-city" id="current-city">
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container location-search">
+            <div class="row">
+                <div class="column align-center">
+                    <form>
+                        <label for="city-search">Place:</label>
+                        <input type="text" name="city-search" id="city-search">
+                        <button id="city-submit">Find</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container five-day-forecast">
+            <div class="row">
+                <div class="column">
+                    <div class="weather" id="day1"></div>
+                </div>
+                <div class="column">
+                    <div class="weather" id="day2"></div>
+                </div>
+                <div class="column">
+                    <div class="weather" id="day3"></div>
+                </div>
+                <div class="column">
+                    <div class="weather" id="day4"></div>
+                </div>
+                <div class="column">
+                    <div class="weather" id="day5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container justify-center align-center">
+            <div class="row">
+                <div class="column">
+                    <div id='map'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/weather_map_utils.js"></script>
+    <script src="js/weather_map.js"></script>
+</body>
+</html>

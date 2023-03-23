@@ -1,0 +1,39 @@
+html {
+    background-image: url("../images/clouds.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: Arial, 'sans-serif'
+}
+
+p {
+    font-family: sans-serif;
+}
+
+input {
+    border-radius: 30px;
+}
+
+button {
+    width: 60px;
+    height: 25px;
+    background-color: #71a2ec;
+    border-radius: 30px;
+}
+
+.location-search .column {
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+
+.location-search .column {
+    align-items: start;
+}
+
+#map {
+    width: 75vw;
+    height: 85vh;
+}
