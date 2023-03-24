@@ -33,6 +33,23 @@ button {
     align-items: start;
 }
 
+.five-day-forecast .row {
+    flex-direction: column;
+}
+
+.weather {
+    gap: 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 25vh;
+    width: 10vw;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    flex-wrap: wrap;
+}
+
 #map {
     width: 75vw;
     height: 85vh;
