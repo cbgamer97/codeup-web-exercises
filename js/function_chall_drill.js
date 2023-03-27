@@ -291,9 +291,18 @@ function totalPets(personsArray) {
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
 
-function sortDrinkByPrice (drink) {
+drinks = [
+    {name: 'beer', price: 8},
+    {name: 'wine', price: 10},
+    {name: 'soda', price: 2},
+    {name: 'juice', price: 5}
+]
 
+const sortDrinkByPrice = (drink) => {
+    drink.sort(drink.price)
 }
+
+console.log(sortDrinkByPrice(drinks))
 
 /**
  * Get Sum of People's Budget
@@ -312,3 +321,20 @@ function sortDrinkByPrice (drink) {
  *        { name: "Martin",  age: 16, budget: 1600 }
  *    ]) ➞ 62600
  */
+
+const budgets = ([
+    { name: "John", age: 21, budget: 23000 },
+    { name: "Steve",  age: 32, budget: 40000 },
+    { name: "Martin",  age: 16, budget: 2700 }
+])
+
+
+const getBudgets = (budget) => {
+    let sumOfBudgets = 0;
+    for (let i = 0; i < budget.length; i++) {
+        sumOfBudgets += budget[i].budget
+    }
+    return sumOfBudgets
+}
+
+console.log(getBudgets(budgets))

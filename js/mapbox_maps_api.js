@@ -51,7 +51,7 @@ restaurants.forEach(restaurant=>{
         `)
     marker.setPopup(popup);
 
-})
+});
 
 document.querySelector('#hideMarkers').addEventListener('click', event=>{
     document.querySelectorAll(".mapboxgl-marker").forEach(svg=>{

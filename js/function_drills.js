@@ -485,9 +485,15 @@ const last = (input) => {
 //
 // - Write a function called `count(input)` that takes in a string and returns the
 // number of characters.
-//
+
+const count = (input) => {
+    return input.length
+}
+
+
 // - Write a function called `add(a, b)` that returns the sum of a and b
-//
+
+
 // - Write a function called `subtract(a, b)` that return the difference between
 // the two inputs.
 //

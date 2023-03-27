@@ -34,23 +34,38 @@ button {
 }
 
 .five-day-forecast .row {
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.five-day-forecast .column {
+    flex-direction: row;
+    gap: 72px;
 }
 
 .weather {
-    gap: 20px;
     border: 2px solid white;
     border-radius: 30px;
     height: 25vh;
     width: 10vw;
-    margin: 15px 0;
     display: flex;
-    justify-content: center;
-    align-content: start;
+    justify-content: flex-start;
+    align-content: center;
     flex-wrap: wrap;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    opacity: .5;
+}
+
+.weather p {
+    font-size: 13px;
+    color: #eee;
+    opacity: 1;
 }
 
 #map {
-    width: 75vw;
-    height: 85vh;
+    width: 70vw;
+    height: 90vh;
+    margin-bottom: 15px;
+    position: absolute;
 }
