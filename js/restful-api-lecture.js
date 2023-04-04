@@ -1,4 +1,4 @@
-import {setFavorite, patchFavorite} from './movies.js'
+import * as movieUtils from './movies.js'
 
 (async()=>{
 
@@ -11,7 +11,7 @@ import {setFavorite, patchFavorite} from './movies.js'
             genre,
             rating
         }
-        let result = await setFavorite(movieData);
+        let result = await movieUtils.setFavorite(movieData);
         console.log(result);
 
     })
@@ -20,6 +20,9 @@ import {setFavorite, patchFavorite} from './movies.js'
         "rating": 2
     }
 
-    let response = await patchFavorite(3, body);
-    let data = await response.json();
+    let response = await movieUtils.patchFavorite(3, body);
+
+    await movieUtils.deleteFavorite(2);
+
+
 })();

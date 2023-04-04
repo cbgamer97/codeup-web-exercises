@@ -7,14 +7,6 @@
       "rating": 5
     },
     {
-      "title": "shrek",
-      "genre": "Comedy",
-      "rating": 5,
-      "id": 2
-    }
-  ],
-  "movies": [
-    {
       "id": 2,
       "title": "The Godfather",
       "genre": "crime",
